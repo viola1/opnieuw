@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--HTML5 doctype-->
-<html>
+<html ng-App="myApp">
 
 <head>
 
@@ -13,11 +13,15 @@
 
     <link rel="stylesheet" type="text/css" href="lib/appframework/icons.css" />
     <link rel="stylesheet" type="text/css" href="lib/appframework/af.ui.css" />
+	<link rel="stylesheet" type="text/css" href="referentiewaarden/style.css" />
 
     <script type="text/javascript" charset="utf-8" src="lib/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/fastclick.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/appframework/appframework.ui.min.js"></script>  
 
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="referentiewaarden/model.js"></script>
+	
     <script src='cordova.js'></script>
 
 </head>
@@ -40,20 +44,18 @@
         <div class="pages">
 
             <!--Tab View Pages-->
-            <div class="panel" data-title="Home" id="tab1" data-selected="true">
-                This is view for first Tab
+            <div class="panel" data-title="Referentiewaarden" id="tab1" data-selected="true">
+			<div  ng-controller="myCtrl">
+                <div ng-include="'referentiewaarden/referentiewaarden.htm'" autoscroll="true"></div>
             </div>
+			</div>
 
-            <div class="panel" data-title="Favorites" id="tab2" >
+            <div class="panel" data-title="Twitter" id="tab2" >
                 This is view for second Tab
             </div>
 
             <div class="panel" data-title="Messages" id="tab3">
                 This is view for third Tab
-            </div>
-
-            <div class="panel" data-title="Profile" id="tab4">
-                This is view for fourth Tab
             </div>
 
         </div>
