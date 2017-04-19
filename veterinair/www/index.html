@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--HTML5 doctype-->
-<html ng-App="myApp">
+<html ng-App="myApp"  ng-controller="myCtrl">
 
 <head>
 
@@ -14,13 +14,22 @@
     <link rel="stylesheet" type="text/css" href="lib/appframework/icons.css" />
     <link rel="stylesheet" type="text/css" href="lib/appframework/af.ui.css" />
 	<link rel="stylesheet" type="text/css" href="referentiewaarden/style.css" />
-
+	<link rel="stylesheet" type="text/css" href="vet.css" />
+	
     <script type="text/javascript" charset="utf-8" src="lib/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/fastclick.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="lib/appframework/appframework.ui.min.js"></script>  
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	<script src="referentiewaarden/model.js"></script>
+    
+	<script language="JavaScript" type="text/javascript">
+		$(function() {
+			$("[data-role='advertisement']").error(function() {
+			$(this).attr("src","banner.jpg")
+			});
+		});
+	</script>
 	
     <script src='cordova.js'></script>
 
@@ -45,9 +54,7 @@
 
             <!--Tab View Pages-->
             <div class="panel" data-title="Referentiewaarden" id="tab1" data-selected="true">
-			<div  ng-controller="myCtrl">
                 <div ng-include="'referentiewaarden/referentiewaarden.htm'" autoscroll="true"></div>
-            </div>
 			</div>
 
             <div class="panel" data-title="Twitter" id="tab2" >
@@ -56,12 +63,22 @@
 			</div>
 			</div>
 
-            <div class="panel" data-title="Messages" id="tab3">
+            <div class="panel" data-title="Berichten" id="tab3">
                 This is view for third Tab
             </div>
-
+			
+			<div class="panel" data-title="Advertentie" id="tab4">
+				<iframe width=100% height=100% ng-src="{{advertisement.adlink()}}"></iframe>
+			</div>
+		<p>{{listSelector.list.name}}</p>
         </div>
 
+		<div>
+			<div class="advertisement">
+				<a href="#tab4" onclick="$.afui.clearHistory()"><img data-role="advertisement" ng-src="{{advertisement.picture()}}"></img></a>
+			</div>
+		</div>
+		
         <footer>
             <a href="#tab1" class="icon icon-lab" onclick="$.afui.clearHistory()"></a>
             <a href="#tab2" class="icon icon-twitter" onclick="$.afui.clearHistory()"></a>
