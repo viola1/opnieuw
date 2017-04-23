@@ -3,7 +3,7 @@
 <ul>
 	<li ng-repeat = "list in lists | orderBy:'name'">
 	<h3>
-		<button ng-click = "showMore = !showMore; listSelector.showMore = showMore; listSelector.list = list;">{{(showMore?'&#x25BC ':'&#9658; ')+list.name}}</button>
+		<button ng-click = "showMore = !showMore; listSelector.showMore = showMore; listSelector.showMore1 = false; listSelector.list = list;">{{(showMore?'&#x25BC ':'&#9658; ')+list.name}}</button>
 	</h3>
 	<ul ng-show="showMore">
 	<li ng-repeat = "list1 in list.list | orderBy:'name'">
