@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app="NotificationApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Application</title>
+	<link rel="stylesheet" type="text/css" href="style.css"></link>
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<script src="lib/Angular/angular.min.js" type="text/javascript" ></script>
+	<script src="js/controllers.js" type="text/javascript" ></script>
+</head>
+<body>
+	
+<h1>Notificaties</h1>
+<div class="main" ng-controller="NotificationFunction">
+	<div>
+    <label for="singleSelect"> Stad: </label>
+    <select name="singleSelect" ng-model="data.locationSelect">
+      <option value="Utrecht">Utrecht</option>
+      <option value="Gent">Gent</option>
+    </select>
+
+    <label for="singleSelect"> Leerjaar: </label>
+    <select name="singleSelect" id="singleSelect" ng-model="data.yearSelect">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="prof">prof</option>
+    </select><br>
+	</div>
+	<div>
+	<ul> 
+	<li class="itemHolder" ng-repeat="item in notifications">
+		<div>
+			<h3> {{item.date +" " +item.title}}</h3>
+			<p> {{item.description}}</p>
+		</div>
+	</a>
+	</li>
+	</div>
+</div>
+
+</body>
+</html>

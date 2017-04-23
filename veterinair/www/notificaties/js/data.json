@@ -1,0 +1,25 @@
+[
+		{
+			"date" 		 : "Vandaag",
+			"title": "Tentamen het een of ander",
+			"description"	:  "Uitgebreide beschrijving en gelukwensen.",
+			"city"	: "Utrecht",
+			"year"	: "1"
+		},
+		{
+			"date" 		 : "Morgen",
+			"title": "Tentamen het een of ander in Gent",
+			"description"	:  "Uitgebreide beschrijving en gelukwensen.",
+			"city"	: "Gent",
+			"year": "2"
+		},
+		{
+			"date" 		 : "1 januari 2017",
+			"title": "Een of ander event",
+			"description"	:  "Uitleg over hoe heerlijk het is naar het event te gaan."
+		},{
+			"date" 		 : "2 januari 2017",
+			"title": "Nog wat te doen.",
+			"description"	:  "Veel meer info over wat er precies te doen is."
+		}
+]
