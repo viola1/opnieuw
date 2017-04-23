@@ -2,14 +2,18 @@
 <h1>Referentiewaarden</h1>
 <ul>
 	<li ng-repeat = "list in lists | orderBy:'name'">
-	<button ng-click = "showMore = !showMore; listSelector.list = list;">{{(showMore?'&#x25BC ':'&#9658; ')+list.name}}</button>
+	<h3>
+		<button ng-click = "showMore = !showMore; listSelector.list = list;">{{(showMore?'&#x25BC ':'&#9658; ')+list.name}}</button>
+	</h3>
 	<ul ng-show="showMore">
 	<li ng-repeat = "list1 in list.list | orderBy:'name'">
-	<button ng-click = "showMore1 = !showMore1">{{(showMore1?'&#x25BC ':'&#9658; ')+list1.name}}</button>
-	<table ng-show="showMore1">
+	<h3>
+		<button ng-click = "showMore1 = !showMore1">{{(showMore1?'&#x25BC ':'&#9658; ')+list1.name}}</button>
+	</h3>
+	<table width=100% ng-show="showMore1">
 		<tr ng-repeat = "value in list1.values | orderBy:'name'">
-			<td>{{value.name}}</td>
-			<td>{{value.value}}</td>
+			<td width=50%>{{value.name}}</td>
+			<td width=30%>{{value.value}}</td>
 			<td>{{value.unit}}</td>
 		</tr>
 	</table>

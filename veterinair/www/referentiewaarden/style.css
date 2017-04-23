@@ -26,10 +26,15 @@
 	   padding-bottom:2px;
    }
    ul li{
+       background-color: #ffffff;
 	   margin:10px;
 	   padding:0px;
 	   border-bottom:1px solid #ddd
    }
+	h3 {
+		background-color: #f2f0e1;
+		padding-bottom: 6px;
+	}
    button {
 	   background-color:#f2f0e1;
 	   border:none;
