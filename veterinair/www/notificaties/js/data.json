@@ -16,10 +16,14 @@
 		{
 			"date" 		 : "1 januari 2017",
 			"title": "Een of ander event",
-			"description"	:  "Uitleg over hoe heerlijk het is naar het event te gaan."
+			"description"	:  "Uitleg over hoe heerlijk het is naar het event te gaan.",
+			"city": "Utrecht",
+			"year":"1"
 		},{
 			"date" 		 : "2 januari 2017",
 			"title": "Nog wat te doen.",
-			"description"	:  "Veel meer info over wat er precies te doen is."
+			"description"	:  "Veel meer info over wat er precies te doen is.",
+			"city": "Gent",
+			"year":"1"
 		}
 ]

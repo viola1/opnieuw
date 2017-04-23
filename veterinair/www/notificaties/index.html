@@ -31,7 +31,7 @@
 	</div>
 	<div>
 	<ul> 
-	<li class="itemHolder" ng-repeat="item in notifications">
+	<li class="itemHolder" ng-repeat="item in notifications | filter:{year:data.yearSelect} | filter:{city:data.locationSelect}">
 		<div>
 			<h3> {{item.date +" " +item.title}}</h3>
 			<p> {{item.description}}</p>
