@@ -1,5 +1,11 @@
 var app = angular.module("myApp", []);
-app.controller("myCtrl", function($scope, $sce) {
+app.controller("myCtrl", function($scope, $sce, $http) {
+		//notificaties
+			$http.get('notificaties/js/data.json').success (function(data){
+				$scope.notifications = data;
+			});
+	
+		// referentiewaarden
 		micromol = '\u03BCmol';
 	    $scope.lists = [
 		{name: 'kat',
