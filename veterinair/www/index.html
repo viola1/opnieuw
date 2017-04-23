@@ -22,6 +22,7 @@
 
 	<script src="lib/Angular/angular.min.js"></script>
 	<script src="referentiewaarden/model.js"></script>
+	<script src="notificaties/js/controllers.js" type="text/javascript" ></script>
     
 	<script language="JavaScript" type="text/javascript">
 		$(function() {
@@ -64,7 +65,7 @@
 			</div>
 
             <div class="panel" data-title="Berichten" id="tab3">
-                This is view for third Tab
+                <div ng-include="'notificaties/notificaties.htm'" autoscroll="true"></div>
             </div>
 			
 			<div class="panel" data-title="Advertentie" id="tab4">
