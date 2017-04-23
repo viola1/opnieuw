@@ -3,12 +3,12 @@
 <ul>
 	<li ng-repeat = "list in lists | orderBy:'name'">
 	<h3>
-		<button ng-click = "showMore = !showMore; listSelector.list = list;">{{(showMore?'&#x25BC ':'&#9658; ')+list.name}}</button>
+		<button ng-click = "showMore = !showMore; listSelector.showMore = showMore; listSelector.list = list;">{{(showMore?'&#x25BC ':'&#9658; ')+list.name}}</button>
 	</h3>
 	<ul ng-show="showMore">
 	<li ng-repeat = "list1 in list.list | orderBy:'name'">
 	<h3>
-		<button ng-click = "showMore1 = !showMore1">{{(showMore1?'&#x25BC ':'&#9658; ')+list1.name}}</button>
+		<button ng-click = "showMore1 = !showMore1; listSelector.showMore1 = showMore1; listSelector.sublist = list1;">{{(showMore1?'&#x25BC ':'&#9658; ')+list1.name}}</button>
 	</h3>
 	<table width=100% ng-show="showMore1">
 		<tr ng-repeat = "value in list1.values | orderBy:'name'">

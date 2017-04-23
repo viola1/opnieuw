@@ -45,17 +45,34 @@ app.controller("myCtrl", function($scope, $sce, $http) {
 		$scope.listSelector.list = {
 			name:""
 		};
+		$scope.listSelector.sublist = {
+			name:""
+		};
+		$scope.listSelector.showMore = false;
+		$scope.listSelector.showMore1 = false;
 		$scope.advertisement = {
 			picture: function() {
-				name = $scope.listSelector.list.name;
-				name = name.charAt(0).toUpperCase() + name.slice(1);
+				name = "";
+				if ($scope.listSelector.showMore){
+					name = $scope.listSelector.list.name;
+					name = name.charAt(0).toUpperCase() + name.slice(1);
+				}
+				if ($scope.listSelector.showMore1){
+					name += ('/'+$scope.listSelector.sublist.name);
+				}
 				pic = 'http://linkelixir.com/iad/2016/'+name+'/banner.jpg';
 				pic = $sce.trustAsResourceUrl(pic);
 				return pic;
 			},
 			adlink: function() {
-				name = $scope.listSelector.list.name;
-				name = name.charAt(0).toUpperCase() + name.slice(1);
+				name = "";
+				if ($scope.listSelector.showMore){
+					name = $scope.listSelector.list.name;
+					name = name.charAt(0).toUpperCase() + name.slice(1);
+				}
+				if ($scope.listSelector.showMore1){
+					name += ('/'+$scope.listSelector.sublist.name);
+				}
 				src = 'http://linkelixir.com/iad/2016/';
 				src = src + name;
 				src = $sce.trustAsResourceUrl(src);
